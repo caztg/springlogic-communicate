@@ -19,4 +19,8 @@ public class AliYunSmsProperties {
 
     private String smsTplCode;
 
+    private String endpoint;
+
+    private String topic;
+
 }

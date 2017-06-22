@@ -10,6 +10,7 @@ import com.fitcooker.app.BussinessException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.rest.webmvc.RepositoryRestExceptionHandler;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,6 +34,7 @@ public class SmsController {
     private static final Logger LOGGER = LoggerFactory.getLogger(SmsController.class);
 
     @Autowired
+    @Qualifier(value = "AliYunSmsServiceV2")
     private AliYunSmsService aliYunSmsService;
 
     @Autowired
